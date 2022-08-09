@@ -6,6 +6,12 @@ import { AppService } from './app.service';
 @Module({
   imports: [EventEmitterModule.forRoot()],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+    {
+      provide: 'AnAliasedService',
+      useExisting: AppService,
+    },
+  ],
 })
 export class AppModule {}
