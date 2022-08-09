@@ -24,7 +24,7 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Reproduction repo to show a bug with event-emitter when using "useExisting" providers
 
 ## Installation
 
@@ -38,29 +38,21 @@ $ npm install
 # development
 $ npm run start
 
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+#Send the REST call
+#http://127.0.0.1:3000/test
 ```
 
-## Test
+
+## Repo creation steps
 
 ```bash
-# unit tests
-$ npm run test
+#Scaffold project from the CLI
+npx @nestjs/cli n --directory=. eventIssue
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+##Add event-emitter
+npm install @nestjs/event-emitter
 ```
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
 ## Stay in touch
 
